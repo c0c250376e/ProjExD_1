@@ -22,15 +22,18 @@ def main():
 
             
         key_lst = pg.key.get_pressed()  #10-3
-        kk_rct.move_ip(-1, 0)
+
+        a=-1
+        b=0
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip(0, -1)
+            b=-1
         if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip(0, +1)
+            b=1
         if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip(-1, 0)
+            a=-2
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip(+2, 0)
+            a=2
+        kk_rct.move_ip(a, b)
 
 
         x= tmr%3200 #5#8#9
